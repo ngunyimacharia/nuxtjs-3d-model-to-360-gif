@@ -108,8 +108,8 @@
           </div>
         </div>
 
-
-        <cld-image :public-id="display.publicId" >
+      <div class="text-center">
+        <cld-image class="mx-auto" :public-id="display.publicId" >
           <cld-transformation delay="10" flags="animated" fetch-format="gif">
           </cld-transformation>
           <cld-transformation height="200" width="400" crop="fill">
@@ -117,6 +117,7 @@
           <cld-transformation :background="display.background">
           </cld-transformation>
         </cld-image>
+      </div>
       </div>
     </div>
   </div>
