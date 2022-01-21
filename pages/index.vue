@@ -109,12 +109,12 @@
         </div>
 
 
-        <cld-image public-id="nuxtjs-3d-model-to-360/CldLogo3D" >
+        <cld-image :public-id="display.publicId" >
           <cld-transformation delay="10" flags="animated" fetch-format="gif">
           </cld-transformation>
           <cld-transformation height="200" width="400" crop="fill">
           </cld-transformation>
-          <cld-transformation background="#3448C5">
+          <cld-transformation :background="display.background">
           </cld-transformation>
         </cld-image>
       </div>
@@ -127,6 +127,10 @@ export default {
   name: 'IndexPage',
   data(){
     return {
+      display: {
+        publicId: 'nuxtjs-3d-model-to-360/CldLogo3D',
+        background:'#3448C5'
+      } ,
       samples:[
         
       ]
