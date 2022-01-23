@@ -134,15 +134,13 @@ export default {
     },
     async upload() {
       this.uploading = true;
-      console.log("Uploading");
       const modelData = await this.readData(this.model);
-      this.cloudinaryModel = await this.$cloudinary.upload(modelData, {
+      const cloudinaryModel = await this.$cloudinary.upload(modelData, {
         upload_preset: "default-preset",
         folder: "nuxtjs-3d-model-to-360",
       });
-      console.log(this.cloudinaryModel)
       this.display = {
-        publicId: this.cloudinaryModel.public_id
+        publicId: cloudinaryModel.public_id
       }
       this.uploading = false;
     },
